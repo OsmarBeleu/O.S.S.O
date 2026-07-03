@@ -1,10 +1,14 @@
+using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using OSSO.Client.Services.Api;
 
 namespace OSSO.Client.ViewModels.Auth;
 
 public partial class LoginViewModel : ObservableObject
 {
+    private readonly AuthApiService _authService = new();
+
     [ObservableProperty]
     private string _username = string.Empty;
 
@@ -18,7 +22,7 @@ public partial class LoginViewModel : ObservableObject
     private bool _isLoading = false;
 
     [RelayCommand]
-    private void Login()
+    private async Task Login()
     {
         if (string.IsNullOrWhiteSpace(Username) ||
             string.IsNullOrWhiteSpace(Password))
@@ -27,7 +31,20 @@ public partial class LoginViewModel : ObservableObject
             return;
         }
 
-        ErrorMessage = string.Empty;
         IsLoading = true;
+        ErrorMessage = string.Empty;
+
+        var result = await _authService.LoginAsync(Username, Password);
+
+        IsLoading = false;
+
+        if (result is null)
+        {
+            ErrorMessage = "Usuario ou senha incorretos.";
+            return;
+        }
+
+        // login bem sucedido — por enquanto só mostra o token no console
+        System.Console.WriteLine($"Login OK! Token: {result.AccessToken}");
     }
 }

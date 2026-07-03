@@ -1,10 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Data.Core;
-using Avalonia.Data.Core.Plugins;
-using System.Linq;
 using Avalonia.Markup.Xaml;
-using OSSO.Client.ViewModels;
+using OSSO.Client.ViewModels.Auth;
 using OSSO.Client.Views;
 
 namespace OSSO.Client;
@@ -22,10 +19,9 @@ public partial class App : Application
         {
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainWindowViewModel(),
+                DataContext = new LoginViewModel(),
             };
         }
-
         base.OnFrameworkInitializationCompleted();
     }
 }

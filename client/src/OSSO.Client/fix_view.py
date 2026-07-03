@@ -1,4 +1,4 @@
-<UserControl xmlns="https://github.com/avaloniaui"
+content = '''<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:OSSO.Client.ViewModels.Auth"
              x:Class="OSSO.Client.Views.Auth.LoginView"
@@ -98,4 +98,8 @@
 
     </Grid>
 
-</UserControl>
+</UserControl>'''
+
+with open('Views/Auth/LoginView.axaml', 'w', encoding='utf-8') as f:
+    f.write(content)
+print('LoginView.axaml atualizado!')
