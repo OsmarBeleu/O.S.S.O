@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/OSSO.Client.Tests/OSSO.Client.Tests.csproj" />
+    <Project Path="src/OSSO.Client/OSSO.Client.csproj" />
+  </Folder>
+</Solution>
