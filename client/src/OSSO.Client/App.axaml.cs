@@ -1,7 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using OSSO.Client.ViewModels.Auth;
+using OSSO.Client.ViewModels;
 using OSSO.Client.Views;
 
 namespace OSSO.Client;

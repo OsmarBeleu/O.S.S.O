@@ -1,5 +1,5 @@
 using Avalonia.Controls;
-using OSSO.Client.ViewModels.Auth;
+using OSSO.Client.ViewModels;
 
 namespace OSSO.Client.Views;
 

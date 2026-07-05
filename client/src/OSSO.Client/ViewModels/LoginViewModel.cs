@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using OSSO.Client.Services.Api;
 
-namespace OSSO.Client.ViewModels.Auth;
+namespace OSSO.Client.ViewModels;
 
 public partial class LoginViewModel : ObservableObject
 {
