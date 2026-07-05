@@ -52,7 +52,7 @@ with open('app/api/v1/routes/auth.py', 'w', encoding='utf-8') as f:
         '    db.add(user)\n'
         '    db.commit()\n'
         '    db.refresh(user)\n'
-        '    return {"message": "Usuario criado com sucesso"}\n\n'
+        '    return {"message": "Usuário criado com sucesso"}\n\n'
         '@router.post("/login", response_model=TokenResponse)\n'
         'def login(data: LoginRequest, db: Session = Depends(get_db)):\n'
         '    user = db.query(User).filter(User.username == data.username).first()\n'

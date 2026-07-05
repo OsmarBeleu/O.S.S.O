@@ -41,10 +41,10 @@
 
                 <!-- Campo usuario -->
                 <Grid Height="72" Margin="0,0,0,8">
-                    <Image Source="/Assets/Images/blob_field_1.png"
+                    <Image Source="/Assets/Images/blob_field.png"
                            Stretch="Fill"/>
                     <TextBox Text="{Binding Username}"
-                             PlaceholderText="Usuario"
+                             PlaceholderText="Usuário"
                              Background="Transparent"
                              BorderThickness="0"
                              Foreground="#0D0D0D"
@@ -56,7 +56,7 @@
 
                 <!-- Campo senha -->
                 <Grid Height="72" Margin="0,0,0,24">
-                    <Image Source="/Assets/Images/blob_field_2.png"
+                    <Image Source="/Assets/Images/blob_field.png"
                            Stretch="Fill"/>
                     <TextBox Text="{Binding Password}"
                              PlaceholderText="Senha"

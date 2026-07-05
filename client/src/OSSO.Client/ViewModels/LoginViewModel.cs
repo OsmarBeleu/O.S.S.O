@@ -27,7 +27,7 @@ public partial class LoginViewModel : ObservableObject
         if (string.IsNullOrWhiteSpace(Username) ||
             string.IsNullOrWhiteSpace(Password))
         {
-            ErrorMessage = "Preencha usuario e senha.";
+            ErrorMessage = "Preencha usuário e senha.";
             return;
         }
 
@@ -40,7 +40,7 @@ public partial class LoginViewModel : ObservableObject
 
         if (result is null)
         {
-            ErrorMessage = "Usuario ou senha incorretos.";
+            ErrorMessage = "Usuário ou senha incorretos.";
             return;
         }
 

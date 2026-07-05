@@ -1,6 +1,10 @@
-content = '''<UserControl xmlns="https://github.com/avaloniaui"
+# Não faço a mínima ideia de para que este arquivo contribuia, então coloquei o que estava aqui no LoginView.axaml e o que estava neste aqui. Ou seja, troquei os dois.
+# Nota extra: quando digito ponto final, ele acha que estou representando uma função e não consigo dar parágrafo :')
+
+"""
+<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:vm="using:OSSO.Client.ViewModels"
+             xmlns:vm="using:OSSO.Client.ViewModels.Auth"
              x:Class="OSSO.Client.Views.Auth.LoginView"
              x:DataType="vm:LoginViewModel">
 
@@ -41,10 +45,10 @@ content = '''<UserControl xmlns="https://github.com/avaloniaui"
 
                 <!-- Campo usuario -->
                 <Grid Height="72" Margin="0,0,0,8">
-                    <Image Source="/Assets/Images/blob_field_1.png"
+                    <Image Source="/Assets/Images/blob_field.png"
                            Stretch="Fill"/>
                     <TextBox Text="{Binding Username}"
-                             PlaceholderText="Usuario"
+                             PlaceholderText="Usuário"
                              Background="Transparent"
                              BorderThickness="0"
                              Foreground="#0D0D0D"
@@ -56,7 +60,7 @@ content = '''<UserControl xmlns="https://github.com/avaloniaui"
 
                 <!-- Campo senha -->
                 <Grid Height="72" Margin="0,0,0,24">
-                    <Image Source="/Assets/Images/blob_field_2.png"
+                    <Image Source="/Assets/Images/blob_field.png"
                            Stretch="Fill"/>
                     <TextBox Text="{Binding Password}"
                              PlaceholderText="Senha"
@@ -98,8 +102,5 @@ content = '''<UserControl xmlns="https://github.com/avaloniaui"
 
     </Grid>
 
-</UserControl>'''
-
-with open('Views/Auth/LoginView.axaml', 'w', encoding='utf-8') as f:
-    f.write(content)
-print('LoginView.axaml atualizado!')
+</UserControl>
+"""
