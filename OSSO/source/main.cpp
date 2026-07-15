@@ -3,7 +3,7 @@
 #include <wx/event.h>
 #include <wx/xrc/xmlres.h>
 
-#include "../resources/sample.xpm"
+#include "../resources/icon.xpm"
 
 #include "main.h"
 
@@ -27,10 +27,10 @@ bool ProgramControl::OnInit() {
   
   wxXmlResource::Get()->InitAllHandlers(); // Load XRC files; listed one by one just to be ~verbose~ explicit
   wxInitAllImageHandlers();
-  wxXmlResource::Get()->Load("resources/splashwindow.xrc");
+  wxXmlResource::Get()->Load("resources/resources.xrc");
   
   wxFrame* splash;
-  if (!(splash = wxXmlResource::Get()->LoadFrame(nullptr, "SplashWindow"))) // Load, display and store splash screen
+  if (!(splash = wxXmlResource::Get()->LoadFrame(nullptr, "LoginWindow"))) // Load, display and store splash screen
     return false;
 
   splash->Show(true);
