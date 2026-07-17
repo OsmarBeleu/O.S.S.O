@@ -10,6 +10,7 @@ add_executable(OSSO
 
     source/main.cpp
     source/app.cpp
+    source/login.cpp
 
 )
 
